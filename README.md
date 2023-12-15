@@ -10,7 +10,7 @@ HealthPlanIQ is an interactive web application designed to provide users with pe
 ## Links
 - ChatBot Application - [link](https://damg7245-team7-healthplaniq-insurance-chat-bot.streamlit.app)
 - Codelab Document - [link](https://codelabs-preview.appspot.com/?file_id=1IsF863dSaATDAfqRkESQvZwO_PFKVhCErxk7iqaILcY#0)
-- Video Demo - [link](https://drive.google.com/file/d/1KcwypKaM6zHN-q7LhUVlhi0JA2nway0I/view?usp=sharing)
+- Video Demo - [link](https://youtu.be/KiZ09Yul0h0?si=NIQoC-PV-DVvljFg)
 - LangChain - [link](https://python.langchain.com/docs/get_started)
 - Snowflake Tutorial - [link](https://quickstarts.snowflake.com/guide/data_engineering_pipelines_with_snowpark_python/index.html?index=..%2F..index#0)
 - Airflow - [link](https://airflow.apache.org/docs/apache-airflow/stable/start.html)
