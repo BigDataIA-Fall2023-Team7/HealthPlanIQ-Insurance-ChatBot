@@ -26,6 +26,9 @@ Users can inquire about the drugs covered in a particular plan, as the bot posse
 - Demo Link - [link]()
 - Streamlit - [link]()
 
+## Architecture 👷🏻‍♂️
+
+![alt text](architecture-diagram/architecture_diagram_final_project.png)
 
 # Steps to run the project locally:
 
