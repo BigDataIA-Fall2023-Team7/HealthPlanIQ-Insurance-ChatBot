@@ -9,7 +9,7 @@ HealthPlanIQ is an interactive web application designed to provide users with pe
 
 ## Links
 - ChatBot Application - [link](https://damg7245-team7-healthplaniq-insurance-chat-bot.streamlit.app)
-- Codelab Document - [link](https://docs.google.com/document/d/1BUJotKMuDXXW1CqZrfk-Sli0t2utbHxiTiTFYFRhCYA/edit?usp=sharing)
+- Codelab Document - [link](https://codelabs-preview.appspot.com/?file_id=1IsF863dSaATDAfqRkESQvZwO_PFKVhCErxk7iqaILcY#0)
 - Video Demo - [link](https://drive.google.com/file/d/1KcwypKaM6zHN-q7LhUVlhi0JA2nway0I/view?usp=sharing)
 - LangChain - [link](https://python.langchain.com/docs/get_started)
 - Snowflake Tutorial - [link](https://quickstarts.snowflake.com/guide/data_engineering_pipelines_with_snowpark_python/index.html?index=..%2F..index#0)
@@ -49,10 +49,49 @@ Airflow:
 ![airflow4](airflow/images/airflow4.png "airflow4")
 ![airflow5](airflow/images/airflow5.png "airflow5")
 
+## Data Sources
+Dataset
+Details
+Source
+
+
+### Individual & families health plan**
+Statewise issuers, health plans, premium rates for age/family types etc.
+[link](https://www.healthcare.gov/health-and-dental-plan-datasets-for-researchers-and-issuers/) 
+
+**Plan benefits**
+(Benefits and Cost Sharing PUF)
+Healthcare plan benefits that consumers get after enrolling
+[link](https://www.cms.gov/marketplace/resources/data/public-use-files)
+
+**Health plan quality ratings**
+(Quality PUF)
+Healthcare plan wise quality ratings
+[link](https://www.cms.gov/medicare/quality-initiatives-patient-assessment-instruments/qualityinitiativesgeninfo/aca-mqi/downloads/mqi-downloads)
+
+**Machine Readable PUF**
+Drugs covered in the plans per issuer
+[link](https://www.cms.gov/medicare/quality-initiatives-patient-assessment-instruments/qualityinitiativesgeninfo/aca-mqi/downloads/mqi-downloads)
+
 
 ## Application Flow
 
-### Getting Started
+### Gathering Data for the chatbot application
+
+1. **Airflow Pipelines**
+   - Pipeline 1 (load_insurance_plans.py): Captures the details regarding insurance plans like insurance issuers, geographic information, insurance plan name, premiums, deductibles, etc. from yearly uploaded EXCEL file
+   - Pipeline 2 (load_insurance_plan_benefits.py): Captures details regarding benefits covered by different insurance plans from a yearly uploaded CSV file
+   - Pipeline 3 (load_insurance_plan_covered_drugs.py): Captures details regarding prescription drugs covered by the insurance plans and their tier details. This data primarily comes from APIs hosted by individual insurance providers. A EXCEL file indicating the drug APIs helps in gaining access to issuer's API landscape
+   - Pipeline 4 (load_insurance_plan_quality_ratings.py): Captures details regarding overall ratings, member experience ratings w.r.t insurance plans. This data comes from yearly uploaded EXCEL file 
+
+   The Airflow pipelines primarily scrape the web-hosted data by making HTTP calls, clean the data and stage the data in Google Cloud Storage buckets. These buckets later act as external stages for snowflake data syncing.
+   
+2. **Snowflake Pipelines**
+   - Snowflake DW acts as the central repository for all the insurance plans related data.
+   - Snowflake stored procedures are written for every table - they help in syncing the data from GCS CSV files to Snowflake tables using commands like COPY and MERGE
+   - These stored procedures are parameterized, which expect a GCS saved CSV file, whose data needs to be synced with Snowflake tables
+
+### Initiate Chat
 
 1. **Input Information**
    - Users start by entering their state, county, and optionally, the insurance plan ID on the home page.
