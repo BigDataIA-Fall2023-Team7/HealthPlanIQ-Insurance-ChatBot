@@ -31,7 +31,7 @@ except:
 
 
 # Global Variables
-PIPELINE_NAME='load_insurance_plan_benefits'
+PIPELINE_NAME='load_insurance_plan_covered_drugs'
 FILE_CACHE = os.getcwd() + Variable.get("airflow_var_filecache_usa_qhp")
 GCS_BUCKET = Variable.get("airflow_var_gcsbucket_usa_qhp")
 
