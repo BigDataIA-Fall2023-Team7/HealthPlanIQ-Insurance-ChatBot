@@ -224,12 +224,12 @@ class insuranceBotModel:
         return json_output
 
     def get_county(self,state):
-        results = self.conn.cursor().execute(f"SELECT COUNTY from USA_QHP.PUBLIC.STATE_COUNTY where STATE_CODE = '{state}'").fetchall()
+        results = self.conn.cursor().execute(f"SELECT COUNTY from USA_QHP.PUBLIC.STATE_COUNTY where STATE_CODE = '{state}' ORDER BY COUNTY").fetchall()
         countynames = [x[0] for x in results]
         return countynames
     
     def get_states(self):
-        results = self.conn.cursor().execute(f"SELECT DISTINCT STATE_CODE from USA_QHP.PUBLIC.STATE_COUNTY").fetchall()
+        results = self.conn.cursor().execute(f"SELECT DISTINCT STATE_CODE from USA_QHP.PUBLIC.STATE_COUNTY ORDER BY STATE_CODE").fetchall()
         countynames = [x[0] for x in results]
         return countynames
 
