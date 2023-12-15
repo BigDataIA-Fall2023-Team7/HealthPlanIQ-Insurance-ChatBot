@@ -5,7 +5,7 @@ HealthPlanIQ is an interactive web application designed to provide users with pe
 
 > **Disclaimer:**
 > 
-> This bot is designed to provide insights about insurance plans. Before purchasing any plans, we is strongly recommend to thoroughly read the documents.
+> This bot is designed to provide insights about insurance plans. Before purchasing any plans, we strongly recommend to thoroughly read the documents and consulting subject matter experts.
 
 ## Links
 - ChatBot Application - [link](https://damg7245-team7-healthplaniq-insurance-chat-bot.streamlit.app)
@@ -37,9 +37,17 @@ HealthPlanIQ is an interactive web application designed to provide users with pe
 
 ## Few Snapshots
 
+Application:
 ![Application : Home]( frontend/images/home.png "Application : Home")
-
 ![Application : ChatBot](frontend/images/chatbot.png "Application : ChatBot")
+
+
+Airflow:
+![airflow1](airflow/images/airflow1.png "airflow1")
+![airflow2](airflow/images/airflow2.png "airflow2")
+![airflow3](airflow/images/airflow3.png "airflow3")
+![airflow4](airflow/images/airflow4.png "airflow4")
+![airflow5](airflow/images/airflow5.png "airflow5")
 
 
 ## Application Flow

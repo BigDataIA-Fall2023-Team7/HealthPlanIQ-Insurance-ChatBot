@@ -1,0 +1,67 @@
+-- load_insurance_plans
+
+{
+    "insurance_plan_year": 2024,
+    "insurance_plan_dataset_url": "https://data.healthcare.gov/datafile/py2024/individual_market_medical.zip"
+}
+
+{
+    "insurance_plan_year": 2023,
+    "insurance_plan_dataset_url": "https://data.healthcare.gov/datafile/py2023/individual_market_medical.zip"
+}
+
+{
+    "insurance_plan_year": 2022,
+    "insurance_plan_dataset_url": "https://data.healthcare.gov/datafile/py2022/individual_market_medical.zip"
+}
+
+-- load_insurance_plan_benefits
+{
+    "insurance_plan_year": 2024,
+    "insurance_plan_benefits_dataset_url": "https://download.cms.gov/marketplace-puf/2024/benefits-and-cost-sharing-puf.zip"
+}
+
+{
+    "insurance_plan_year": 2023,
+    "insurance_plan_benefits_dataset_url": "https://download.cms.gov/marketplace-puf/2023/benefits-and-cost-sharing-puf.zip"
+}
+
+{
+    "insurance_plan_year": 2022,
+    "insurance_plan_benefits_dataset_url": "https://download.cms.gov/marketplace-puf/2022/benefits-and-cost-sharing-puf.zip"
+}
+
+
+-- load_insurance_plan_drug_coverage
+
+{
+    "state": "AK",
+    "insurance_issuer_machine_readable_url": "https://download.cms.gov/marketplace-puf/2024/machine-readable-url-puf.zip"
+}
+
+{
+    "state": "AK",
+    "insurance_issuer_machine_readable_url": "https://download.cms.gov/marketplace-puf/2023/machine-readable-url-puf.zip"
+}
+
+{
+    "state": "AK",
+    "insurance_issuer_machine_readable_url": "https://download.cms.gov/marketplace-puf/2022/machine-readable-url-puf.zip"
+}
+
+-- load_insurance_plan_quality_ratings
+
+{
+    "insurance_plan_year": 2024,
+    "insurance_plan_quality_ratings_dataset_url": "https://www.cms.gov/files/zip/quality-puf-py2024.zip"
+}
+
+{
+    "insurance_plan_year": 2023,
+    "insurance_plan_quality_ratings_dataset_url": "https://www.cms.gov/files/zip/quality-puf-py2023.zip"
+}
+
+{
+    "insurance_plan_year": 2022,
+    "insurance_plan_quality_ratings_dataset_url": "https://www.cms.gov/files/zip/2022-quality-puf.zip"
+}

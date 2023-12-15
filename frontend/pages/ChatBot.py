@@ -57,7 +57,7 @@ def send_prompt(prompt):
 
 
 st.markdown("<h1 style='text-align: center;'>HealthPlanIQ : Insurance Chat Bot</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'><i>Disclaimer: This bot is designed to provide insights about insurance plans. Before purchasing any plans, we is strongly recommend to thoroughly read the documents.", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'><i>Disclaimer: This bot is designed to provide insights about insurance plans. Before purchasing any plans, we strongly recommend to thoroughly read the documents and consulting subject matter experts.", unsafe_allow_html=True)
 
 for message in st.session_state.messages:
     message_func(
